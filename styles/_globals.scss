@@ -1,0 +1,9 @@
+@use 'helpers' as *;
+
+body {
+	font-family: var(--font-family-base);
+	color: var(--text-base);
+	&.body-block {
+		overflow: hidden;
+	}
+}

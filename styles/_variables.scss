@@ -1,0 +1,35 @@
+@use 'helpers' as *;
+
+:root {
+	// Container
+	--container-width: #{rem(1200)};
+	--container-padding-x: #{rem(15)};
+
+	--header-height: #{rem(103)};
+
+	// Fonts
+	--font-family-base: 'Manrope', sans-serif;
+	--font-family-accent: 'DM Sans', sans-serif;
+	--base-line-height: 1.5;
+
+	// Colors
+	--bg-color-base: #fff;
+	--text-base: #000;
+	--text-link-color: #2cbde6;
+	--light: #fff;
+	--dark: #000;
+	--text-light: #333;
+	--brands-color: #666;
+	--color-1: #f85a47;
+	--color-2: rgb(189, 204, 255);
+	--color-3: #f1ffff;
+	--color-4: #9672ff;
+	--color-5: #4ddffd;
+	--color-6: #f2b8ec;
+}
+
+@include mobile {
+	:root {
+		--header-height: #{rem(70)};
+	}
+}
