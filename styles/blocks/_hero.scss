@@ -2,6 +2,7 @@
 
 .hero {
 	--hero-padding-top: #{rem(83)};
+	margin-bottom: rem(128);
 	&__container {
 		padding-top: calc(var(--header-height) + var(--hero-padding-top));
 		position: relative;
@@ -127,6 +128,7 @@
 	&__body {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&__item {
 	}
@@ -164,6 +166,12 @@
 	}
 	.partners-hero {
 		max-width: 100%;
+	}
+}
+
+@media (max-width: rem(842.98)) {
+	.hero {
+		margin-bottom: rem(70);
 	}
 }
 
