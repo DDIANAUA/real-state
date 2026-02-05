@@ -26,6 +26,8 @@
 	--color-4: #9672ff;
 	--color-5: #4ddffd;
 	--color-6: #f2b8ec;
+
+	--button-hover: color-mix(in srgb, var(--color-1), #000 10%);
 }
 
 @include mobile {

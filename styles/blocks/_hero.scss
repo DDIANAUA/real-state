@@ -100,7 +100,7 @@
 		padding: rem(5) rem(15);
 		transition: background-color 0.2s ease;
 		@include hovera {
-			background-color: color-mix(in srgb, var(--color-1), #000 10%);
+			background-color: var(--button-hover);
 		}
 	}
 }
@@ -108,7 +108,6 @@
 	width: 100%;
 	img {
 		width: 100%;
-		// height: auto;
 		object-fit: cover;
 	}
 }

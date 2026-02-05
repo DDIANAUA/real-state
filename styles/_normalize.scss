@@ -36,7 +36,7 @@ body,
 	font-style: normal;
 }
 p {
-	--paragraphMarginBottom: 24px;
+	--paragraphMarginBottom: rem(12);
 
 	margin-block: 0;
 }
