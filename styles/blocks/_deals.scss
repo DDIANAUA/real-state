@@ -63,7 +63,8 @@
 .nav-deals {
 	&__list {
 		display: flex;
-		column-gap: rem(54);
+		flex-wrap: wrap;
+		gap: rem(15) rem(54);
 	}
 	&__item {
 	}
@@ -106,13 +107,20 @@
 }
 
 .tabs-deals {
-	display: grid;
-	gap: rem(30);
-	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	&__body {
+		display: none;
+		gap: rem(30);
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		grid-auto-rows: rem(300);
+		&.active {
+			display: grid;
+		}
+	}
 	&__item {
 		position: relative;
 		overflow: hidden;
 		border-radius: rem(5);
+		height: rem(300);
 	}
 	&__options {
 		position: absolute;
@@ -137,6 +145,8 @@
 	}
 	&__image {
 		overflow: hidden;
+		width: 100%;
+		height: 100%;
 		img {
 			width: 100%;
 			height: 100%;
@@ -146,5 +156,12 @@
 				scale: 1.05;
 			}
 		}
+	}
+}
+
+@media (max-width: rem(697.98)) {
+	.header-deals {
+		flex-direction: column;
+		row-gap: rem(15);
 	}
 }

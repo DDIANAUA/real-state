@@ -3,7 +3,6 @@
 const bodyElement = document.body;
 const burgerElement = document.querySelector('[data-js-burger]');
 const navListElement = document.querySelector('[data-js-nav-list]');
-console.log(burgerElement, bodyElement, navListElement);
 
 /* Відкривання меню бургер */
 burgerElement.addEventListener('click', function () {
@@ -18,5 +17,23 @@ burgerElement.addEventListener('click', function () {
 		burgerElement.classList.add('burger-open');
 		navListElement.classList.add('nav-open');
 		bodyElement.classList.add('body-block');
+	}
+});
+
+// Секція tabs deals
+const tabsNavElement = document.querySelector('[data-js-tabs-nav]');
+const tabsNavButtonElements = document.querySelectorAll(
+	'[data-js-tabs-button]',
+);
+const tabsItemElements = document.querySelectorAll('[data-js-tabs-item]');
+
+tabsNavElement.addEventListener('click', function (event) {
+	const currentButton = event.target.closest('button[data-js-tabs-button]');
+	if (currentButton && !currentButton.classList.contains('active')) {
+		const currentButtonIndex = Number(currentButton.dataset.tabsId);
+		tabsNavButtonElements.forEach(item => item.classList.remove('active'));
+		tabsItemElements.forEach(item => item.classList.remove('active'));
+		currentButton.classList.add('active');
+		tabsItemElements[currentButtonIndex].classList.add('active');
 	}
 });
