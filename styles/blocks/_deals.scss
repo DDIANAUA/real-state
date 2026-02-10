@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .deals {
+	padding-block: rem(123);
 	&__container {
 	}
 	&__header {
