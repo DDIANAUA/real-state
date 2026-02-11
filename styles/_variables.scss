@@ -20,6 +20,7 @@
 	--dark: #000;
 	--text-light: #333;
 	--brands-color: #666;
+	--border-color: #ebebeb;
 	--color-1: #f85a47;
 	--color-2: rgb(189, 204, 255);
 	--color-3: #f1ffff;
@@ -28,6 +29,8 @@
 	--color-6: #f2b8ec;
 
 	--button-hover: color-mix(in srgb, var(--color-1), #000 10%);
+
+	--transition-base: all 0.2s ease;
 }
 
 @include mobile {

@@ -144,3 +144,11 @@
 		}
 	}
 }
+
+@include mobile {
+	.how {
+		&__container {
+			padding-block: rem(50);
+		}
+	}
+}

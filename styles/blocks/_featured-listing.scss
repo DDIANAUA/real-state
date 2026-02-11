@@ -1,8 +1,8 @@
 @use '../helpers' as *;
 
 .featured-listing {
-	padding-block: rem(120);
 	&__container {
+		padding-block: rem(120);
 	}
 	&__title {
 		text-align: center;
@@ -173,6 +173,9 @@
 
 @include mobile {
 	.featured-listing {
+		&__container {
+			padding-block: rem(50);
+		}
 		&__title {
 			&:not(:last-child) {
 				margin-bottom: rem(45);
