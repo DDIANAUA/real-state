@@ -141,6 +141,7 @@ a:where([class]) {
   --color-4: #9672ff;
   --color-5: #4ddffd;
   --color-6: #f2b8ec;
+  --color-7: #d6d7d8;
   --button-hover: color-mix(in srgb, var(--color-1), #000 10%);
   --transition-base: all 0.2s ease;
 }
@@ -193,6 +194,13 @@ body.body-block {
   line-height: 1;
 }
 
+.logo {
+  color: var(--text-light);
+  font-size: 1.4375rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -207,13 +215,6 @@ body.body-block {
   align-items: center;
   padding-block: 0.625rem;
 }
-.header__logo {
-  color: var(--text-light);
-  font-size: 1.4375rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
 .nav__list {
   display: flex;
   column-gap: 2.6875rem;
@@ -923,7 +924,7 @@ body.body-block {
 }
 .comments__items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.875rem;
 }
 .comments__items:not(:last-child) {
@@ -1032,6 +1033,149 @@ body.body-block {
   }
   .comments__brands:not(:last-child) {
     margin-bottom: 2.1875rem;
+  }
+}
+.newsletter__container {
+  padding-block: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter__title {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.44;
+}
+.newsletter__title:not(:last-child) {
+  margin-bottom: 0.6875rem;
+}
+.newsletter__label {
+  font-size: 1.4375rem;
+  font-weight: 700;
+  line-height: 1.44; /* 33.166px */
+  letter-spacing: 0.02em;
+}
+.newsletter__label:not(:last-child) {
+  margin-bottom: 2.125rem;
+}
+.form-newsletter {
+  display: flex;
+  max-width: 42.875rem;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.6875rem 1.875rem 1.625rem 2.8125rem;
+  box-shadow: 0 163px 80px 0 rgba(0, 0, 0, 0.04), 0 105.648px 46.852px 0 rgba(0, 0, 0, 0.03), 0 62.785px 25.481px 0 rgba(0, 0, 0, 0.02), 0 32.6px 13px 0 rgba(0, 0, 0, 0.02), 0 13.281px 6.519px 0 rgba(0, 0, 0, 0.02), 0 3.019px 3.148px 0 rgba(0, 0, 0, 0.01);
+}
+.form-newsletter__label {
+  display: block;
+  font-size: 1.0625rem;
+  color: var(--color-7);
+  font-weight: 500;
+  line-height: 1.44; /* 24.514px */
+  letter-spacing: 0.02em;
+}
+.form-newsletter__input {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.44; /* 28.84px */
+  letter-spacing: 0.02em;
+  border: none;
+}
+.form-newsletter__input:focus {
+  outline: none;
+}
+.form-newsletter__input::placeholder {
+  font-weight: 400;
+}
+.form-newsletter__button {
+  background-color: var(--color-1);
+  color: var(--light);
+  border: none;
+  padding-inline: 2.5rem;
+}
+
+@media (max-width: 54.12375rem) {
+  .newsletter__container {
+    padding-block: 7.5rem;
+  }
+}
+@media (max-width: 34.93625rem) {
+  .form-newsletter {
+    padding-block: 5.5rem;
+    padding: 1rem;
+    flex-direction: column;
+    row-gap: 0.625rem;
+  }
+  .form-newsletter__button {
+    height: 4.5rem;
+  }
+}
+.footer__container {
+  padding-block: 2.25rem;
+}
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__top:not(:last-child) {
+  margin-bottom: 4.8125rem;
+}
+.footer__copy {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.nav-footer__list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem 2.875rem;
+}
+.nav-footer__link {
+  color: var(--text-base);
+  font-family: var(--font-family-accent);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: capitalize;
+}
+.nav-footer__link::after {
+  content: "";
+  margin-top: -0.125rem;
+  display: block;
+  width: 0;
+  height: 0.0625rem;
+  background-color: var(--dark);
+  transition: var(--transition-base);
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-footer__link:hover::after {
+    width: 100%;
+  }
+}
+.nav-footer__link:active::after {
+  width: 100%;
+}
+
+@media (max-width: 49.43625rem) {
+  .footer__container {
+    padding-block: 1.25rem;
+  }
+  .footer__top {
+    flex-direction: column;
+  }
+  .footer__top:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+  .footer__logo:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+  .nav-footer__list {
+    flex-wrap: wrap;
   }
 }
 

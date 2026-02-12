@@ -1,1 +1,82 @@
 @use '../helpers' as *;
+
+.footer {
+	&__container {
+		padding-block: rem(36);
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: rem(77);
+		}
+	}
+	&__logo {
+	}
+	&__nav {
+	}
+	&__copy {
+		text-align: center;
+		color: var(--text-light);
+		font-size: rem(12);
+		font-weight: 600;
+		line-height: 1;
+	}
+}
+
+.nav-footer {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: rem(20) rem(46);
+	}
+	&__item {
+	}
+	&__link {
+		color: var(--text-base);
+		font-family: var(--font-family-accent);
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: 1;
+		text-transform: capitalize;
+		&::after {
+			content: '';
+			margin-top: rem(-2);
+			display: block;
+			width: 0;
+			height: rem(1);
+			background-color: var(--dark);
+			transition: var(--transition-base);
+		}
+		@include hovera {
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: rem(790.98)) {
+	.footer {
+		&__container {
+			padding-block: rem(20);
+		}
+		&__top {
+			flex-direction: column;
+			&:not(:last-child) {
+				margin-bottom: rem(40);
+			}
+		}
+		&__logo {
+			&:not(:last-child) {
+				margin-bottom: rem(40);
+			}
+		}
+	}
+	.nav-footer {
+		&__list {
+			flex-wrap: wrap;
+		}
+	}
+}

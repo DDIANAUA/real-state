@@ -13,10 +13,19 @@
 	}
 	&__comments {
 	}
+	&__newsletter {
+	}
 }
 
 .title {
 	font-size: rem(40);
 	font-weight: 500;
+	line-height: 1;
+}
+
+.logo {
+	color: var(--text-light);
+	font-size: rem(23);
+	font-weight: 700;
 	line-height: 1;
 }

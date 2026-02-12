@@ -1,0 +1,93 @@
+@use '../helpers' as *;
+
+.newsletter {
+	&__container {
+		padding-block: rem(160);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title {
+		font-size: rem(45);
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1.44;
+		&:not(:last-child) {
+			margin-bottom: rem(11);
+		}
+	}
+	&__label {
+		font-size: rem(23);
+		font-weight: 700;
+		line-height: 1.44; /* 33.166px */
+		letter-spacing: 0.02em;
+		&:not(:last-child) {
+			margin-bottom: rem(34);
+		}
+	}
+	&__form {
+	}
+}
+.form-newsletter {
+	display: flex;
+	max-width: rem(686);
+	width: 100%;
+	justify-content: space-between;
+	padding: rem(27) rem(30) rem(26) rem(45);
+	box-shadow:
+		0 163px 80px 0 rgba(0, 0, 0, 0.04),
+		0 105.648px 46.852px 0 rgba(0, 0, 0, 0.03),
+		0 62.785px 25.481px 0 rgba(0, 0, 0, 0.02),
+		0 32.6px 13px 0 rgba(0, 0, 0, 0.02),
+		0 13.281px 6.519px 0 rgba(0, 0, 0, 0.02),
+		0 3.019px 3.148px 0 rgba(0, 0, 0, 0.01);
+	&__input-area {
+	}
+	&__label {
+		display: block;
+		font-size: rem(17);
+		color: var(--color-7);
+		font-weight: 500;
+		line-height: 1.44; /* 24.514px */
+		letter-spacing: 0.02em;
+	}
+	&__input {
+		font-size: rem(20);
+		font-weight: 700;
+		line-height: 1.44; /* 28.84px */
+		letter-spacing: 0.02em;
+		border: none;
+		&:focus {
+			outline: none;
+		}
+		&::placeholder {
+			font-weight: 400;
+		}
+	}
+	&__button {
+		background-color: var(--color-1);
+		color: var(--light);
+		border: none;
+		padding-inline: rem(40);
+	}
+}
+
+@media (max-width: rem(865.98)) {
+	.newsletter {
+		&__container {
+			padding-block: rem(120);
+		}
+	}
+}
+
+@media (max-width: rem(558.98)) {
+	.form-newsletter {
+		padding-block: 5.5rem;
+		padding: rem(16);
+		flex-direction: column;
+		row-gap: rem(10);
+		&__button {
+			height: rem(72);
+		}
+	}
+}
